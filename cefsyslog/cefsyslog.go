@@ -16,6 +16,5 @@ func sendSyslog(proto string, server string, message string) (resp bool) {
 		log.Fatal(err)
 	}
 	defer syslog.Close()
-	retur
-
+	return
 }
