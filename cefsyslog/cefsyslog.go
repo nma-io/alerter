@@ -1,4 +1,4 @@
-package dataset
+package cefsyslog
 
 import (
 	"fmt"
@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-func sendSyslog(proto string, server string, message string) (resp bool) {
+func Send(proto string, server string, message string) (resp bool) {
 	// Send to Syslog (UDP or TCP)
 	// Server is a string in the form of "host:port"
 	syslog, _ := net.Dial(proto, server)
